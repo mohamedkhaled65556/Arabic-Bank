@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بنك محمد</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="text-center">
+        <h3>رصيدك هو <span id="Balance">**** جنيه</span></h3>
+        <button type="button" class="btn btn-primary" onclick="showBalance()">
+          عرض الرصيد
+        </button>
+      </div>
+      <div class="text-center mt-4">
+        <input
+          placeholder="أدخل القيمه"
+          id="Deposite"
+          class="btn btn-outline-success w-auto"
+          type="number"
+        />
+        <button class="btn btn-success" onclick="Deposite()">إيداع</button>
+      </div>
+
+      <div class="text-center mt-3">
+        <input
+          placeholder="أدخل القيمه"
+          id="Withdraw"
+          class="btn btn-outline-danger w-auto"
+          type="number"
+        />
+        <button class="btn btn-danger" onclick="Withdraw()">سحب</button>
+      </div>
+      <div class="text-center">
+        <button
+          id="History"
+          class="btn btn-dark mt-5"
+          onclick="historyTransaction()"
+        >
+          كشف حساب
+        </button>
+        <table class="table table-primary text-center mt-1 w-75 mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">رصيدك قبل العمليه</th>
+              <th scope="col">العمليه</th>
+              <th scope="col">رصيدك بعد العمليه</th>
+            </tr>
+          </thead>
+          <tbody id="Transaction"></tbody>
+        </table>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
