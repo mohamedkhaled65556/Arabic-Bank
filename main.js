@@ -31,6 +31,8 @@ const changePassword = () => {
       passward = newPassword;
       alert("تم تغيير كلمة المرور");
       isOnePassword = false;
+      span.innerHTML = `<span id="Balance">**** جنيه</span>`;
+      isShowBalance = false;
     }
   }
 };
