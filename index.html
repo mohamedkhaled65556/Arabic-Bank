@@ -13,10 +13,29 @@
   </head>
   <body>
     <section>
-      <div class="text-center">
+      <div class="text-end mt-2">
+        <input
+          type="password"
+          id="Password"
+          class="btn btn-outline-secondary"
+          placeholder="أدخل كلمة المرور الجديده"
+        />
+        <button
+          type="button"
+          class="btn btn-secondary"
+          onclick="changePassword()"
+        >
+          تغيير كلمة المرور
+        </button>
+      </div>
+      <div class="text-center mt-3">
         <h3>رصيدك هو <span id="Balance">**** جنيه</span></h3>
-        <button type="button" class="btn btn-primary" onclick="showBalance()">
-          عرض الرصيد
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="showAndHideBalance()"
+        >
+          عرض/إخفاء الرصيد
         </button>
       </div>
       <div class="text-center mt-4">
