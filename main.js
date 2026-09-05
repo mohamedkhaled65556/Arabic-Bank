@@ -66,6 +66,7 @@ const Deposite = () => {
       balance += amount;
       span.innerHTML = `
     <span id="Balance" type="number">${balance} جنيه</span>`;
+      isShowBalance = true;
       historyTrans.push(history);
     } else alert("القيمه التي أدخلتها غير صحيحه");
   }
@@ -88,6 +89,7 @@ const Withdraw = () => {
       balance -= amount;
       span.innerHTML = `
     <span id="Balance" type="number">${balance} جنيه</span>`;
+      isShowBalance = true;
       historyTrans.push(history);
     }
   }
