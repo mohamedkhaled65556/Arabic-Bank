@@ -4,12 +4,14 @@ let historyTrans = [];
 let isOnePassword = false;
 let isShowBalance = false;
 let span = document.querySelector("#Balance");
+let register = document.querySelector("#Register");
 
 const oneTimePass = () => {
   if (isOnePassword == false) {
     let Passward = prompt("أدخل كلمة المرور");
 
     if (Passward == passward) {
+      register.innerHTML = `<button class="btn btn-success">مسجل</button>`;
       isOnePassword = true;
     } else {
       alert("كلمة المرور غير صحيحه");
@@ -30,6 +32,7 @@ const changePassword = () => {
     else {
       passward = newPassword;
       alert("تم تغيير كلمة المرور");
+      register.innerHTML = `<button class="btn btn-danger">غير مسجل</button>`;
       isOnePassword = false;
       span.innerHTML = `<span id="Balance">**** جنيه</span>`;
       isShowBalance = false;
